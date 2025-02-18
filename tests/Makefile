@@ -1,11 +1,8 @@
 SRC_PATH ?= ../src
-
 FULL_SRC_PATH = $(realpath $(SRC_PATH))
 CPPFLAGS = -nostdinc -I. -I$(FULL_SRC_PATH)/include
 CFLAGS = -Wall -Wextra -fno-PIC -fno-stack-protector -fno-builtin
-
 # Remove the line below to disable debugging support.
-
 CFLAGS += -g -O0
 LDFLAGS = -nostdlib -no-pie -L$(FULL_SRC_PATH)
 LDLIBS = -lc
